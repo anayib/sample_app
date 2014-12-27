@@ -1,6 +1,10 @@
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+#se agrgan las dos siguientes lineas para que pinte de verde
+#o rojo los test
+require "minitest/reporters"
+Minitest::Reporters.use!
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
