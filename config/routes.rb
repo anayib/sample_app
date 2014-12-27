@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
  root 'static_pages#home'
 
   get 'help' => 'static_pages#help'
@@ -6,6 +8,10 @@ Rails.application.routes.draw do
   get 'about' => 'static_pages#about'
 
   get 'contact' => 'static_pages#contact'
+
+  get 'signup' => 'users#new'
+
+
   # the syntax used above get  'static_pages/contact'
   #gets to the same route buy the url is just help
   # The priority is based upon order of creation: first created -> highest priority.
